@@ -14,3 +14,7 @@ python3 -m pip install -r requirements.txt
 ```bash
 python3 nn.py
 ```
+
+## C++
+
+I ported the code to C++ (see [cpp](cpp))

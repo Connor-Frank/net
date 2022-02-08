@@ -1,6 +1,8 @@
-# net - a simple MLP
+# net - a very simple MLP
 
 ## Setup
+
+Uses numpy and tqdm
 
 ```bash
 git clone https://github.com/Connor-Frank/net.git

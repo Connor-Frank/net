@@ -1,4 +1,4 @@
-### net - a simple MLP
+# net - a simple MLP
 
 ## Setup
 

@@ -5,7 +5,7 @@
 Fedora:
 
 ```bash
-sudo dnf install make gcc-c++
+sudo dnf install make gcc gcc-c++
 ```
 
 Debian/Ubuntu:

@@ -1,6 +1,7 @@
 """ See LICENSE file for copyright and license details. """
 
 import numpy as np
+from tqdm import trange
 
 
 def magic_proc(x):
@@ -28,7 +29,7 @@ np.random.seed(1)
 hid0 = 2 * np.random.random((3, 4)) - 1
 hid1 = 2 * np.random.random((4, 1)) - 1
 
-for i in range(int(N_STEPS) + 1):
+for i in (t := trange(int(N_STEPS))):
     l0 = x if i % 2 == 0 else x1
 
     # get layer results one after the other
@@ -36,11 +37,7 @@ for i in range(int(N_STEPS) + 1):
     l2 = magic_proc(np.dot(l1, hid1))
 
     l2_error = y - l2
-
-    if i % PRINT_INTERVAL == 0:
-        print(f"error after i={i}: {str(np.mean(np.abs(l2_error)))}")
-    else:
-        print(f"error after i={i}: {str(np.mean(np.abs(l2_error)))}", end="\r")
+    t.set_description("error: %f" % np.mean(np.abs(l2_error)))
 
     # get deltas and errors
     l2_delta = l2_error * magic_eval(l2)

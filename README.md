@@ -11,6 +11,7 @@ python3 -m pip install -r requirements.txt
 ```
 
 ## Run
+
 ```bash
 python3 nn.py
 ```

@@ -12,7 +12,7 @@ def magic_eval(x):
     return x * (1 - x)
 
 
-N_STEPS = 1e4
+N_STEPS = 1e5
 PRINT_INTERVAL = N_STEPS / 10
 
 # input data

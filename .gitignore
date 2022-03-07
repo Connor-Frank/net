@@ -12,6 +12,7 @@ venv/
 ## ide/editor
 # if you contribute using a tool that creates folders
 # or files like these, please update this section
+tags
 .idea
 *.iml
 .vscode
